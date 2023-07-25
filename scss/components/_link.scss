@@ -1,0 +1,27 @@
+// @mixin link($width, $height) {
+//   width: $width;
+//   height: $height;
+//   background: rgba(33, 37, 41, 0.5);
+
+//   a {
+//     font: 400 normal 16px/1.4 "Roboto";
+//     color: white;
+//     width: 160px;
+//   }
+
+//   display: flex;
+// }
+// @include mobile {
+//   .projects-link {
+//     justify-content: space-between;
+//     align-items: center;
+//     @include link(230px, 22px);
+//     padding: 11px 16px 11px 12px;
+//   }
+// }
+// @include desktop {
+//   .projects-link {
+//     @include link(405px, 22px);
+//     padding: 22px 20px;
+//   }
+// }

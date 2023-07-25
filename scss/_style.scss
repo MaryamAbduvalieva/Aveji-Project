@@ -1,19 +1,338 @@
 @include mobile {
   .navbar {
     margin-top: 8px;
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      height: 39px;
+      width: 41px;
+    }
+    .navbar-box,
+    .navbar-phone {
+      display: none;
+    }
+    details {
+      display: block;
+      summary {
+        cursor: pointer;
+
+        list-style-type: none;
+        transition: all 0.3s ease;
+        &::after {
+          content: url(/assets/images/burger_open.svg);
+        }
+        &:hover {
+          transform: scale(1.1);
+        }
+        &:active {
+          transform: scale(1.2);
+        }
+      }
+    }
   }
+
   .header {
+    &-page {
+      margin-top: 20px;
+    }
+    &-title {
+      font: 400 normal 32px / 1.2 "Helvetica";
+      text-transform: uppercase;
+    }
+    &-paragraph {
+      font: 400 normal 16px / 1.4 "Roboto";
+    }
+    &-img-second {
+      display: none;
+    }
+    &-content {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+    }
     &-link {
+      &-mobile {
+        display: block;
+        font: 400 normal 18px / normal "Roboto";
+        color: $black;
+        text-underline-offset: 6px;
+        text-decoration: underline;
+        transition: all 0.3s ease;
+        margin-top: 24px;
+        margin-bottom: 26px;
+        &:hover {
+          color: $accent;
+        }
+        &:active {
+          color: darken($accent, 20%);
+        }
+      }
       &-desktop {
         display: none;
       }
+    }
+  }
+  .about-us {
+    .row {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    margin-top: 48px;
+
+    &-title-desktop {
+      display: none;
+    }
+    &-title-mobile {
+      font: 400 normal 28px / normal "Helvetica";
+    }
+    &-paragraph {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      &-item {
+        font: 400 normal 16px / 1.4 "Roboto";
+        padding-right: 20px;
+      }
+    }
+    &-summary {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      &-title {
+        font: 400 normal 24px / 1.4 "Helvetica";
+      }
+      &-paragraph {
+        font: 400 normal 16px / 1.4 "Roboto";
+        padding-right: 170px;
+      }
+    }
+  }
+  .process {
+    margin-top: 48px;
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    &-title {
+      font: 400 normal 28px / normal "Helvetica";
+    }
+    &-paragraph {
+      font: 400 normal 16px / 1.4 "Roboto";
+      padding-right: 35px;
+      margin-bottom: 28px;
+    }
+    &-points {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      &-title {
+        font: 400 normal 24px / normal "Helvetica";
+      }
+      &-paragraph {
+        font: 400 normal 16px / 1.4 "Roboto";
+      }
+    }
+    hr {
+      border: 1px solid $black;
+    }
+  }
+  .projects {
+    margin-top: 48px;
+
+    &-title {
+      font: 400 normal 28px / normal "Helvetica";
+    }
+    #slideshow {
+      overflow: hidden;
+      height: 328px;
+      width: 359px;
+      margin: 0 auto;
+    }
+    .slide {
+      float: left;
+      height: 328px;
+      width: 260px;
+      &-wrapper {
+        margin-top: 20px;
+
+        width: calc(252px * 6);
+        animation: slide 10s ease infinite;
+      }
+    }
+    .slides-container {
+      display: none;
+    }
+    @keyframes slide {
+      17% {
+        margin-left: 0px;
+      }
+
+      34% {
+        margin-left: calc(-272px * 1);
+      }
+
+      51% {
+        margin-left: calc(-272px * 2);
+      }
+
+      68% {
+        margin-left: calc(-272px * 3);
+      }
+      76% {
+        margin-left: calc(-272px * 4);
+      }
+      85% {
+        margin-left: calc(-272px * 5);
+      }
+    }
+  }
+  .reviews {
+    margin-top: 48px;
+    &-title {
+      font: 400 normal 28px / normal "Helvetica";
+    }
+    &-card-box {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 20px;
+    }
+    &-card {
+      border: 1px solid black;
+      padding: 32px 32.5px 37px 32.5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      &-title {
+        font: 600 normal 18px / normal "Helvetica";
+        margin-top: 12px;
+      }
+      &-paragraph {
+        font: 400 normal 16px / 1.4 "Roboto";
+
+        text-align: center;
+        width: 278px;
+      }
+    }
+  }
+  .form {
+    &-img {
+      display: none;
+    }
+    margin-top: 48px;
+    &-input {
+      border: none;
+      border-bottom: 1px solid $black;
+      padding-bottom: 12px;
+      &:focus {
+        border-color: $accent;
+      }
+      &::placeholder {
+        font: 400 normal 16px / 1.4 "Roboto";
+        color: $black;
+      }
+    }
+    &-title {
+      font: 400 normal 28px / 1.4 "Helvetica";
+      width: 345px;
+    }
+    &-paragraph {
+      font: 400 normal 16px / 1.4 "Roboto";
+      margin-top: 20px;
+    }
+    &-box {
+      display: flex;
+      flex-direction: column;
+      &-content {
+        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+    &-btn {
+      margin-top: 8px;
+    }
+    .app-box {
+      display: flex;
+
+      gap: 8px;
+      margin-top: 28px;
+    }
+  }
+  .footer {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 25px;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    &-contacts {
+      font: 400 normal 18px / normal "Roboto";
+      text-transform: uppercase;
+      color: $black;
+      &-box {
+        display: flex;
+        gap: 40px;
+      }
+      &:hover {
+        color: $accent;
+      }
+      &:active {
+        color: darken($accent, 20%);
+      }
+    }
+    &-licence {
+      &-box {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+        .licence-desktop {
+          display: none;
+        }
+      }
+      font: 400 normal 16px / 1.4 "Roboto";
+      color: $black;
+      &:hover {
+        color: $accent;
+      }
+      &:active {
+        color: darken($accent, 20%);
+      }
+    }
+    &-copyright-box {
+      text-align: center;
+    }
+    &-copyright {
+      font: 400 normal 18px / normal "Roboto";
+      text-transform: uppercase;
     }
   }
 }
 @include desktop {
   .navbar {
     margin-top: 12px;
-    &-box {
+    .logo {
+      height: 70px;
+      width: 75px;
+    }
+    .burger {
+      display: none;
+    }
+    .navbar-box {
       display: flex;
       gap: 8px;
       flex-direction: column;
@@ -23,7 +342,8 @@
         color: $black;
       }
     }
-    &-phone {
+    .navbar-phone {
+      display: block;
       margin-left: auto;
       &-item {
         font: 400 normal 18px / normal "Roboto";
@@ -34,11 +354,12 @@
   .header {
     &-page {
       margin-top: 38px;
-      height: 1107px;
+    }
+    &-img-second {
+      display: block;
     }
     &-title {
       font: 400 normal 72px / 1.2 "Helvetica";
-      text-transform: uppercase;
     }
     &-link {
       margin-left: auto;
@@ -54,10 +375,10 @@
         text-decoration: underline;
         transition: all 0.3s ease;
         &:hover {
-          color: $yellow;
+          color: $accent;
         }
         &:active {
-          color: darken($yellow, 20%);
+          color: darken($accent, 20%);
         }
       }
     }
@@ -65,11 +386,13 @@
     &-content {
       margin-top: 40px;
       display: flex;
+      flex-direction: row;
       gap: 253px;
     }
     &-content-box {
       display: flex;
       flex-direction: column;
+
       gap: 232px;
     }
     &-paragraph {
@@ -80,30 +403,34 @@
   .about-us {
     margin-top: 120px;
     display: flex;
+    .row {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
     gap: 135px;
-    &-title {
+    &-title-desktop {
+      display: flex;
       font: 400 normal 48px / normal "Helvetica";
       padding-right: 97px;
     }
+    &-title-mobile {
+      display: none;
+    }
     &-paragraph {
-      display: flex;
-      flex-direction: column;
       gap: 20px;
+      margin-top: 29px;
       &-item {
-        font: 400 normal 16px / 1.4 "Roboto";
         padding-right: 233px;
       }
     }
     &-summary {
       margin-top: 35px;
-      display: flex;
-      flex-direction: column;
       gap: 30px;
       &-title {
         font: 400 normal 36px / 1.4 "Helvetica";
       }
       &-paragraph {
-        font: 400 normal 16px / 1.4 "Roboto";
         padding-right: 500px;
       }
     }
@@ -113,17 +440,20 @@
 
     &-content {
       display: flex;
+      flex-direction: row;
       gap: 126px;
     }
     &-title {
       font: 400 normal 48px / normal "Helvetica";
     }
     &-paragraph {
-      font: 400 normal 16px / 1.4 "Roboto";
       padding-right: 350px;
+      margin-top: 22px;
+      margin-bottom: 0;
     }
     &-points {
       display: flex;
+      flex-direction: row;
       gap: 41px;
       margin-bottom: 24px;
       margin-top: 24px;
@@ -135,13 +465,9 @@
         width: 328px;
       }
       &-paragraph {
-        font: 400 normal 16px / 1.4 "Roboto";
-
+        margin-top: 12px;
         width: 329px;
       }
-    }
-    hr {
-      border: 1px solid $black;
     }
   }
   .projects {
@@ -157,14 +483,93 @@
     .slides-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 10px 0;
       margin-top: 32px;
+    }
+
+    #slideshow {
+      display: none;
     }
   }
   .reviews {
     margin-top: 120px;
     &-title {
       font: 400 normal 48px / normal "Helvetica";
+    }
+    &-card-box {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+    &-card {
+      padding: 40px 40px 60px 40px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      &-title {
+        margin-top: 30px;
+      }
+      &-paragraph {
+        width: 365px;
+        margin-top: 20px;
+        text-align: center;
+      }
+    }
+  }
+  .form {
+    margin-top: 120px;
+    &-img {
+      display: block;
+    }
+    &-title {
+      font: 400 normal 48px / 1.4 "Helvetica";
+      width: 678px;
+    }
+    &-paragraph {
+      margin-top: 0;
+    }
+    &-box {
+      gap: 32px;
+      &-content {
+        margin-top: 40px;
+      }
+    }
+    &-btn {
+      margin-top: 8px;
+    }
+    .app-box {
+      display: flex;
+
+      gap: 8px;
+    }
+  }
+  .footer {
+    margin-top: 120px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 256px;
+
+    &-licence {
+      &-box {
+        padding-left: 24px;
+        flex-direction: row;
+
+        .licence-desktop {
+          display: inline;
+        }
+      }
+
+      font: 400 normal 16px / 1.4 "Roboto";
+    }
+    &-contacts {
+      &-box {
+        display: flex;
+        gap: 40px;
+      }
     }
   }
 }

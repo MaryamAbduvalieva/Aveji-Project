@@ -147,38 +147,349 @@ select {
   .navbar {
     margin-top: 8px;
   }
+  .navbar-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar .logo {
+    height: 39px;
+    width: 41px;
+  }
+  .navbar .navbar-box,
+  .navbar .navbar-phone {
+    display: none;
+  }
+  .navbar details {
+    display: block;
+  }
+  .navbar details summary {
+    cursor: pointer;
+    list-style-type: none;
+    transition: all 0.3s ease;
+  }
+  .navbar details summary::after {
+    content: url(/assets/images/burger_open.svg);
+  }
+  .navbar details summary:hover {
+    transform: scale(1.1);
+  }
+  .navbar details summary:active {
+    transform: scale(1.2);
+  }
+  .header-page {
+    margin-top: 20px;
+  }
+  .header-title {
+    font: 400 normal 32px/1.2 "Helvetica";
+    text-transform: uppercase;
+  }
+  .header-paragraph {
+    font: 400 normal 16px/1.4 "Roboto";
+  }
+  .header-img-second {
+    display: none;
+  }
+  .header-content {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .header-link-mobile {
+    display: block;
+    font: 400 normal 18px/normal "Roboto";
+    color: #212529;
+    text-underline-offset: 6px;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+    margin-top: 24px;
+    margin-bottom: 26px;
+  }
+  .header-link-mobile:hover {
+    color: #ddd7c0;
+  }
+  .header-link-mobile:active {
+    color: #b9ad7e;
+  }
   .header-link-desktop {
     display: none;
+  }
+  .about-us {
+    margin-top: 48px;
+  }
+  .about-us .row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .about-us-title-desktop {
+    display: none;
+  }
+  .about-us-title-mobile {
+    font: 400 normal 28px/normal "Helvetica";
+  }
+  .about-us-paragraph {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .about-us-paragraph-item {
+    font: 400 normal 16px/1.4 "Roboto";
+    padding-right: 20px;
+  }
+  .about-us-summary {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .about-us-summary-title {
+    font: 400 normal 24px/1.4 "Helvetica";
+  }
+  .about-us-summary-paragraph {
+    font: 400 normal 16px/1.4 "Roboto";
+    padding-right: 170px;
+  }
+  .process {
+    margin-top: 48px;
+  }
+  .process-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .process-title {
+    font: 400 normal 28px/normal "Helvetica";
+  }
+  .process-paragraph {
+    font: 400 normal 16px/1.4 "Roboto";
+    padding-right: 35px;
+    margin-bottom: 28px;
+  }
+  .process-points {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .process-points-title {
+    font: 400 normal 24px/normal "Helvetica";
+  }
+  .process-points-paragraph {
+    font: 400 normal 16px/1.4 "Roboto";
+  }
+  .process hr {
+    border: 1px solid #212529;
+  }
+  .projects {
+    margin-top: 48px;
+  }
+  .projects-title {
+    font: 400 normal 28px/normal "Helvetica";
+  }
+  .projects #slideshow {
+    overflow: hidden;
+    height: 328px;
+    width: 359px;
+    margin: 0 auto;
+  }
+  .projects .slide {
+    float: left;
+    height: 328px;
+    width: 260px;
+  }
+  .projects .slide-wrapper {
+    margin-top: 20px;
+    width: 1512px;
+    animation: slide 10s ease infinite;
+  }
+  .projects .slides-container {
+    display: none;
+  }
+  @keyframes slide {
+    17% {
+      margin-left: 0px;
+    }
+    34% {
+      margin-left: -272px;
+    }
+    51% {
+      margin-left: -544px;
+    }
+    68% {
+      margin-left: -816px;
+    }
+    76% {
+      margin-left: -1088px;
+    }
+    85% {
+      margin-left: -1360px;
+    }
+  }
+  .reviews {
+    margin-top: 48px;
+  }
+  .reviews-title {
+    font: 400 normal 28px/normal "Helvetica";
+  }
+  .reviews-card-box {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+  }
+  .reviews-card {
+    border: 1px solid black;
+    padding: 32px 32.5px 37px 32.5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .reviews-card-title {
+    font: 600 normal 18px/normal "Helvetica";
+    margin-top: 12px;
+  }
+  .reviews-card-paragraph {
+    font: 400 normal 16px/1.4 "Roboto";
+    text-align: center;
+    width: 278px;
+  }
+  .form {
+    margin-top: 48px;
+  }
+  .form-img {
+    display: none;
+  }
+  .form-input {
+    border: none;
+    border-bottom: 1px solid #212529;
+    padding-bottom: 12px;
+  }
+  .form-input:focus {
+    border-color: #ddd7c0;
+  }
+  .form-input::placeholder {
+    font: 400 normal 16px/1.4 "Roboto";
+    color: #212529;
+  }
+  .form-title {
+    font: 400 normal 28px/1.4 "Helvetica";
+    width: 345px;
+  }
+  .form-paragraph {
+    font: 400 normal 16px/1.4 "Roboto";
+    margin-top: 20px;
+  }
+  .form-box {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-box-content {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .form-btn {
+    margin-top: 8px;
+  }
+  .form .app-box {
+    display: flex;
+    gap: 8px;
+    margin-top: 28px;
+  }
+  .footer {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 25px;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-contacts {
+    font: 400 normal 18px/normal "Roboto";
+    text-transform: uppercase;
+    color: #212529;
+  }
+  .footer-contacts-box {
+    display: flex;
+    gap: 40px;
+  }
+  .footer-contacts:hover {
+    color: #ddd7c0;
+  }
+  .footer-contacts:active {
+    color: #b9ad7e;
+  }
+  .footer-licence {
+    font: 400 normal 16px/1.4 "Roboto";
+    color: #212529;
+  }
+  .footer-licence-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+  .footer-licence-box .licence-desktop {
+    display: none;
+  }
+  .footer-licence:hover {
+    color: #ddd7c0;
+  }
+  .footer-licence:active {
+    color: #b9ad7e;
+  }
+  .footer-copyright-box {
+    text-align: center;
+  }
+  .footer-copyright {
+    font: 400 normal 18px/normal "Roboto";
+    text-transform: uppercase;
   }
 }
 @media (min-width: 1440px) {
   .navbar {
     margin-top: 12px;
   }
-  .navbar-box {
+  .navbar .logo {
+    height: 70px;
+    width: 75px;
+  }
+  .navbar .burger {
+    display: none;
+  }
+  .navbar .navbar-box {
     display: flex;
     gap: 8px;
     flex-direction: column;
     margin-left: 750px;
   }
-  .navbar-box-item {
+  .navbar .navbar-box-item {
     font: 400 normal 18px/normal "Roboto";
     color: #212529;
   }
-  .navbar-phone {
+  .navbar .navbar-phone {
+    display: block;
     margin-left: auto;
   }
-  .navbar-phone-item {
+  .navbar .navbar-phone-item {
     font: 400 normal 18px/normal "Roboto";
     color: #212529;
   }
   .header-page {
     margin-top: 38px;
-    height: 1107px;
+  }
+  .header-img-second {
+    display: block;
   }
   .header-title {
     font: 400 normal 72px/1.2 "Helvetica";
-    text-transform: uppercase;
   }
   .header-link {
     margin-left: auto;
@@ -196,14 +507,15 @@ select {
     transition: all 0.3s ease;
   }
   .header-link-desktop:hover {
-    color: #f9c67b;
+    color: #ddd7c0;
   }
   .header-link-desktop:active {
-    color: #f59c19;
+    color: #b9ad7e;
   }
   .header-content {
     margin-top: 40px;
     display: flex;
+    flex-direction: row;
     gap: 253px;
   }
   .header-content-box {
@@ -220,30 +532,34 @@ select {
     display: flex;
     gap: 135px;
   }
-  .about-us-title {
+  .about-us .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .about-us-title-desktop {
+    display: flex;
     font: 400 normal 48px/normal "Helvetica";
     padding-right: 97px;
   }
+  .about-us-title-mobile {
+    display: none;
+  }
   .about-us-paragraph {
-    display: flex;
-    flex-direction: column;
     gap: 20px;
+    margin-top: 29px;
   }
   .about-us-paragraph-item {
-    font: 400 normal 16px/1.4 "Roboto";
     padding-right: 233px;
   }
   .about-us-summary {
     margin-top: 35px;
-    display: flex;
-    flex-direction: column;
     gap: 30px;
   }
   .about-us-summary-title {
     font: 400 normal 36px/1.4 "Helvetica";
   }
   .about-us-summary-paragraph {
-    font: 400 normal 16px/1.4 "Roboto";
     padding-right: 500px;
   }
   .process {
@@ -251,17 +567,20 @@ select {
   }
   .process-content {
     display: flex;
+    flex-direction: row;
     gap: 126px;
   }
   .process-title {
     font: 400 normal 48px/normal "Helvetica";
   }
   .process-paragraph {
-    font: 400 normal 16px/1.4 "Roboto";
     padding-right: 350px;
+    margin-top: 22px;
+    margin-bottom: 0;
   }
   .process-points {
     display: flex;
+    flex-direction: row;
     gap: 41px;
     margin-bottom: 24px;
     margin-top: 24px;
@@ -274,11 +593,8 @@ select {
     width: 328px;
   }
   .process-points-paragraph {
-    font: 400 normal 16px/1.4 "Roboto";
+    margin-top: 12px;
     width: 329px;
-  }
-  .process hr {
-    border: 1px solid #212529;
   }
   .projects {
     margin-top: 120px;
@@ -292,13 +608,108 @@ select {
   .projects .slides-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px 0;
     margin-top: 32px;
+  }
+  .projects #slideshow {
+    display: none;
   }
   .reviews {
     margin-top: 120px;
   }
   .reviews-title {
     font: 400 normal 48px/normal "Helvetica";
+  }
+  .reviews-card-box {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .reviews-card {
+    padding: 40px 40px 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .reviews-card-title {
+    margin-top: 30px;
+  }
+  .reviews-card-paragraph {
+    width: 365px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .form {
+    margin-top: 120px;
+  }
+  .form-img {
+    display: block;
+  }
+  .form-title {
+    font: 400 normal 48px/1.4 "Helvetica";
+    width: 678px;
+  }
+  .form-paragraph {
+    margin-top: 0;
+  }
+  .form-box {
+    gap: 32px;
+  }
+  .form-box-content {
+    margin-top: 40px;
+  }
+  .form-btn {
+    margin-top: 8px;
+  }
+  .form .app-box {
+    display: flex;
+    gap: 8px;
+  }
+  .footer {
+    margin-top: 120px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 256px;
+  }
+  .footer-licence {
+    font: 400 normal 16px/1.4 "Roboto";
+  }
+  .footer-licence-box {
+    padding-left: 24px;
+    flex-direction: row;
+  }
+  .footer-licence-box .licence-desktop {
+    display: inline;
+  }
+  .footer-contacts-box {
+    display: flex;
+    gap: 40px;
+  }
+}
+@media (min-width: 375px) {
+  .form-btn {
+    width: 136px;
+    height: 22px;
+    padding: 12px 20px;
+    background-color: #212529;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    transition: all 0.3s ease;
+  }
+  .form-btn:hover {
+    background-color: #ddd7c0;
+    color: #212529;
+  }
+  .form-btn:active {
+    background-color: #b9ad7e;
+    color: #212529;
   }
 }
